@@ -43,18 +43,21 @@ const Index: React.FC = () => {
               label="Cirkel 1 radius:"
               value={r1}
               onChange={setR1}
+              min={0.5}
             />
             <NumberInput
               id="r2"
               label="Cirkel 2 radius:"
               value={r2}
               onChange={setR2}
+              min={0.5}
             />
             <NumberInput
               id="distance"
               label="Distancen imellem de 2 centrummer:"
               value={distance}
               onChange={setDistance}
+              min={0}
             />
             <hr />
             Område der overlapper: <b>{intersectionArea}</b>
