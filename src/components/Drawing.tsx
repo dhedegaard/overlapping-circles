@@ -22,8 +22,10 @@ const Drawing: React.FC<Props> = props => {
   const scale = Math.min(scaleWidth, scaleHeight);
   console.log("scale:", scale);
 
-  const r1x = 150; // TODO: calculate
-  const r2x = 350; // TODO: calculate
+  const scaledDist = props.distance * scale;
+  const r1x = width * 0.2 + props.r1 * scale; // TODO: calculate
+  const r2x = width * 0.8 - props.r2 * scale; // TODO: calculate
+  console.log("r1:", r1x, "r2:", r2x);
 
   return (
     <Stage width={width} height={height}>
