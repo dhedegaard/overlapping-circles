@@ -36,7 +36,7 @@ const NumberInput: React.FC<Props> = props => {
         value={props.value}
         onChange={onChange}
         inputProps={{
-          min: 0,
+          min: 0.5,
           step: 0.5
         }}
       />

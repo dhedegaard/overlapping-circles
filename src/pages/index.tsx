@@ -2,8 +2,9 @@ import React from "react";
 import NumberInput from "../components/NumberInput";
 import Layout from "../layouts";
 import { Typography, Card, Container, CardContent } from "@material-ui/core";
+import Drawing from "../components/Drawing";
 
-const Index: React.FC = props => {
+const Index: React.FC = () => {
   const [r1, setR1] = React.useState(1);
   const [r2, setR2] = React.useState(2);
   const [distance, setDistance] = React.useState(2);
@@ -57,6 +58,13 @@ const Index: React.FC = props => {
             />
             <hr />
             Område der overlapper: <b>{intersectionArea}</b>
+          </CardContent>
+        </Card>
+      </Container>
+      <Container>
+        <Card>
+          <CardContent>
+            <Drawing r1={r1} r2={r2} distance={distance} />
           </CardContent>
         </Card>
       </Container>
