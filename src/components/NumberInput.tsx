@@ -1,11 +1,6 @@
+import { FormLabel, TextField } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
-import {
-  TextField,
-  Typography,
-  FormControlLabel,
-  FormLabel
-} from "@material-ui/core";
 
 const Container = styled.div`
   display: flex;
