@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-typescript",
-  "description": "Gatsby TypeScript starter",
+  "name": "overlapping-circles",
+  "description": "Overlapping circles",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dennis Hedegaard <dennis@dhedegaard.dk>",
   "dependencies": {
     "@material-ui/core": "^4.9.1",
     "@material-ui/styles": "^4.9.0",
