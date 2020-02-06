@@ -11,7 +11,9 @@ const Layout: React.FC = props => (
         { name: "description", content: "Overlapping circles" },
         { name: "keywords", content: "circles, overlapping" }
       ]}
-    />
+    >
+      <html lang="en" />
+    </Helmet>
     <Container fixed maxWidth="md">
       {props.children}
     </Container>
