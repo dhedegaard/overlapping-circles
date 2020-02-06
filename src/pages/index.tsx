@@ -1,7 +1,9 @@
-import React from 'react'
-import NumberInput from '../components/NumberInput';
+import React from "react";
+import NumberInput from "../components/NumberInput";
+import Layout from "../layouts";
+import { Typography, Card, Container, CardContent } from "@material-ui/core";
 
-const Index: React.FC = (props) => {
+const Index: React.FC = props => {
   const [r1, setR1] = React.useState(1);
   const [r2, setR2] = React.useState(2);
   const [distance, setDistance] = React.useState(2);
@@ -27,13 +29,28 @@ const Index: React.FC = (props) => {
     );
   }, [r1, r2, distance]);
 
-  return (<div>
-    <NumberInput label="Cirkel 1 radius:" value={r1} onChange={setR1} />
-    <NumberInput label="Cirkel 2 radius:" value={r2} onChange={setR2} />
-    <NumberInput label="Distancen imellem de 2 centrummer:" value={distance} onChange={setDistance} />
-    <hr />
-    Område der overlapper: <b>{intersectionArea}</b>
-  </div>);
-}
+  return (
+    <Layout>
+      <Typography gutterBottom variant="h3" align="center">
+        Overlapping circles
+      </Typography>
+      <Container maxWidth="sm">
+        <Card>
+          <CardContent>
+            <NumberInput label="Cirkel 1 radius:" value={r1} onChange={setR1} />
+            <NumberInput label="Cirkel 2 radius:" value={r2} onChange={setR2} />
+            <NumberInput
+              label="Distancen imellem de 2 centrummer:"
+              value={distance}
+              onChange={setDistance}
+            />
+            <hr />
+            Område der overlapper: <b>{intersectionArea}</b>
+          </CardContent>
+        </Card>
+      </Container>
+    </Layout>
+  );
+};
 
-export default Index
+export default Index;
