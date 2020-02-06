@@ -37,9 +37,20 @@ const Index: React.FC = props => {
       <Container maxWidth="sm">
         <Card>
           <CardContent>
-            <NumberInput label="Cirkel 1 radius:" value={r1} onChange={setR1} />
-            <NumberInput label="Cirkel 2 radius:" value={r2} onChange={setR2} />
             <NumberInput
+              id="r1"
+              label="Cirkel 1 radius:"
+              value={r1}
+              onChange={setR1}
+            />
+            <NumberInput
+              id="r2"
+              label="Cirkel 2 radius:"
+              value={r2}
+              onChange={setR2}
+            />
+            <NumberInput
+              id="distance"
               label="Distancen imellem de 2 centrummer:"
               value={distance}
               onChange={setDistance}

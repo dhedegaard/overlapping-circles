@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  TextField,
+  Typography,
+  FormControlLabel,
+  FormLabel
+} from "@material-ui/core";
 
 const Container = styled.div`
   display: flex;
@@ -7,6 +13,7 @@ const Container = styled.div`
 `;
 
 type Props = {
+  id: string;
   label: string;
   value: number;
   onChange: (value: number) => void;
@@ -27,13 +34,16 @@ const NumberInput: React.FC<Props> = props => {
 
   return (
     <Container>
-      <label>{props.label}</label>
-      <input
+      <FormLabel htmlFor={props.id}>{props.label}</FormLabel>
+      <TextField
+        id={props.id}
         type="number"
-        min={0}
         value={props.value}
         onChange={onChange}
-        step={0.5}
+        inputProps={{
+          min: 0,
+          step: 0.5
+        }}
       />
     </Container>
   );
