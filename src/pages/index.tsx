@@ -40,27 +40,27 @@ const Index: React.FC = () => {
           <CardContent>
             <NumberInput
               id="r1"
-              label="Cirkel 1 radius:"
+              label="Circle 1 radius:"
               value={r1}
               onChange={setR1}
               min={0.5}
             />
             <NumberInput
               id="r2"
-              label="Cirkel 2 radius:"
+              label="Circle 2 radius:"
               value={r2}
               onChange={setR2}
               min={0.5}
             />
             <NumberInput
               id="distance"
-              label="Distancen imellem de 2 centrummer:"
+              label="Distancen between the centers:"
               value={distance}
               onChange={setDistance}
               min={0}
             />
             <hr />
-            Område der overlapper: <b>{intersectionArea}</b>
+            Overlapping area: <b>{intersectionArea}</b>
           </CardContent>
         </Card>
       </Container>
