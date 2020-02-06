@@ -22,7 +22,7 @@ const NumberInput: React.FC<Props> = props => {
       if (isNaN(value)) {
         return;
       }
-      realOnChange(value);
+      realOnChange(Math.max(value, 0.5));
     },
     [realOnChange]
   );
