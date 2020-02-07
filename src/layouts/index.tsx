@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Container, CssBaseline } from "@material-ui/core";
+import favicon from "../assets/favicon.png";
 
 const Layout: React.FC = props => (
   <>
@@ -13,6 +14,7 @@ const Layout: React.FC = props => (
       ]}
     >
       <html lang="en" />
+      <link rel="icon" href={favicon} />
     </Helmet>
     <Container fixed maxWidth="md">
       {props.children}
