@@ -12,6 +12,7 @@ import {
 import Drawing from "../components/Drawing";
 import styled from "styled-components";
 import OverlappingResult from "../components/OverlappingResult";
+import calcIntersectionArea from "../helpers/calc-intersection-area";
 
 const StyledContainer = styled(Container)`
   margin-bottom: 24px;
@@ -28,26 +29,10 @@ const Index: React.FC = () => {
   const [r2, setR2] = React.useState(2);
   const [distance, setDistance] = React.useState(2);
 
-  const intersectionArea = React.useMemo(() => {
-    if (distance >= r1 + r2) {
-      return 0;
-    }
-    const a = r1 * r1;
-    const b = r2 * r2;
-
-    const x = (a - b + distance * distance) / (2 * distance);
-    const z = x * x;
-    const y = Math.sqrt(a - z);
-
-    if (distance <= Math.abs(r2 - r1)) {
-      return Math.PI * Math.min(a, b);
-    }
-    return (
-      a * Math.asin(y / r1) +
-      b * Math.asin(y / r2) -
-      y * (x + Math.sqrt(z + b - a))
-    );
-  }, [r1, r2, distance]);
+  const intersectionArea = React.useMemo(
+    () => calcIntersectionArea(r1, r2, distance),
+    [r1, r2, distance]
+  );
 
   return (
     <Layout>
