@@ -66,7 +66,7 @@ const Index: React.FC = () => {
                     display="inline"
                     overrideColor={colors.indigo[500]}
                   >
-                    r1
+                    r<sub>1</sub>
                   </ColorizedTypography>
                   ):
                 </>
@@ -85,7 +85,7 @@ const Index: React.FC = () => {
                     display="inline"
                     overrideColor={colors.teal[500]}
                   >
-                    r2
+                    r<sub>2</sub>
                   </ColorizedTypography>
                   ):
                 </>
