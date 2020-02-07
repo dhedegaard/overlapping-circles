@@ -13,6 +13,10 @@ const Layout: React.FC = props => (
       ]}
     >
       <html lang="en" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      />
     </Helmet>
     <Container fixed maxWidth="md">
       {props.children}
