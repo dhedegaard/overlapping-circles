@@ -10,6 +10,7 @@ const height = 500;
 
 const Container = styled.div`
   overflow-x: scroll;
+  height: ${height}px;
 `;
 
 type Props = {
