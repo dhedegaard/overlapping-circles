@@ -1,9 +1,16 @@
 import React from "react";
 import NumberInput from "../components/NumberInput";
 import Layout from "../layouts";
-import { Typography, Card, Container, CardContent } from "@material-ui/core";
+import {
+  Typography,
+  Card,
+  Container,
+  CardContent,
+  Divider
+} from "@material-ui/core";
 import Drawing from "../components/Drawing";
 import styled from "styled-components";
+import OverlappingResult from "../components/OverlappingResult";
 
 const StyledContainer = styled(Container)`
   margin-bottom: 24px;
@@ -64,8 +71,12 @@ const Index: React.FC = () => {
               onChange={setDistance}
               min={0}
             />
-            <hr />
-            Overlapping area: <b>{Math.round(100 * intersectionArea) / 100}</b>
+          </CardContent>
+          <Divider />
+          <CardContent>
+            <OverlappingResult>
+              {Math.round(100 * intersectionArea) / 100}
+            </OverlappingResult>
           </CardContent>
         </Card>
       </StyledContainer>
