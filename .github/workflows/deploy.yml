@@ -22,6 +22,7 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
+      - run: echo "overlapping-circles.dhedegaard.dk" > ./public/CNAME
         env:
           CI: true
       - name: GitHub Pages
