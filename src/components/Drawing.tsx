@@ -9,7 +9,8 @@ const width = 830;
 const height = 500;
 
 const Container = styled.div`
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   height: ${height}px;
 `;
 
