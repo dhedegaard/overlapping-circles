@@ -1,5 +1,5 @@
 import React from "react";
-import { Circle, Layer, Stage, Line } from "react-konva";
+import { Layer, Stage } from "react-konva";
 import DrawingCircle from "./DrawingCircle";
 
 const width = 600;
