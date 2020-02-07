@@ -13,7 +13,8 @@ const Container = styled.div`
 
 const StyledFormLabel = styled(FormLabel)`
   text-align: right;
-  padding-right: 5px;
+  padding: 6px;
+  padding-left: 0;
 `;
 
 type Props = {
