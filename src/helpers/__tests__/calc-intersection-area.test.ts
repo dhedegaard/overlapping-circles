@@ -11,7 +11,11 @@ describe("calc-intersection-area", () => {
   });
 
   it("should calculate some examples", () => {
-    // https://www.analyzemath.com/Geometry/circles_problems.html
+    // <https://www.analyzemath.com/Geometry/circles_problems.html>
     expect(calcIntersectionArea(10, 10, 10)).toBeCloseTo(122.836);
+    // <https://codegolf.stackexchange.com/questions/162324/circle-intersection-area>
+    expect(calcIntersectionArea(5, 5, 7)).toBeCloseTo(14.7749);
+    expect(calcIntersectionArea(3, 3, 0)).toBeCloseTo(28.274);
+    expect(calcIntersectionArea(3, 3, 10)).toBe(0);
   });
 });
