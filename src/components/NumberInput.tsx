@@ -5,6 +5,15 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   justify-content: center;
+
+  & > * {
+    flex-basis: 50%;
+  }
+`;
+
+const StyledFormLabel = styled(FormLabel)`
+  text-align: right;
+  padding-right: 5px;
 `;
 
 type Props = {
@@ -30,7 +39,7 @@ const NumberInput: React.FC<Props> = props => {
 
   return (
     <Container>
-      <FormLabel htmlFor={props.id}>{props.label}</FormLabel>
+      <StyledFormLabel htmlFor={props.id}>{props.label}</StyledFormLabel>
       <TextField
         id={props.id}
         type="number"

@@ -3,6 +3,11 @@ import NumberInput from "../components/NumberInput";
 import Layout from "../layouts";
 import { Typography, Card, Container, CardContent } from "@material-ui/core";
 import Drawing from "../components/Drawing";
+import styled from "styled-components";
+
+const StyledContainer = styled(Container)`
+  margin-bottom: 24px;
+`;
 
 const Index: React.FC = () => {
   const [r1, setR1] = React.useState(1);
@@ -35,7 +40,7 @@ const Index: React.FC = () => {
       <Typography gutterBottom variant="h3" align="center">
         Overlapping circles
       </Typography>
-      <Container maxWidth="sm">
+      <StyledContainer maxWidth="sm">
         <Card>
           <CardContent>
             <NumberInput
@@ -63,14 +68,14 @@ const Index: React.FC = () => {
             Overlapping area: <b>{Math.round(100 * intersectionArea) / 100}</b>
           </CardContent>
         </Card>
-      </Container>
-      <Container>
+      </StyledContainer>
+      <StyledContainer>
         <Card>
           <CardContent>
             <Drawing r1={r1} r2={r2} distance={distance} />
           </CardContent>
         </Card>
-      </Container>
+      </StyledContainer>
     </Layout>
   );
 };
