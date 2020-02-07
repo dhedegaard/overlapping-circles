@@ -8,7 +8,7 @@ A calculation of circle-circle intersection area, as described here:
 
 The live project can be found here:
 
-<https://dhedegaard.github.io/overlapping-circles/>
+<https://overlapping-circles.dhedegaard.dk/>
 
 ## How to get it running
 
