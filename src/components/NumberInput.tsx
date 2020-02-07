@@ -22,20 +22,21 @@ type Props = {
   label: string;
   value: number;
   min: number;
+  max: number;
   onChange: (value: number) => void;
 };
 
 const NumberInput: React.FC<Props> = props => {
-  const { onChange: realOnChange, min } = props;
+  const { onChange: realOnChange, min, max } = props;
   const onChange = React.useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const value = parseFloat(event.currentTarget.value);
       if (isNaN(value)) {
         return;
       }
-      realOnChange(Math.max(value, min));
+      realOnChange(Math.min(Math.max(value, min), max));
     },
-    [realOnChange, min]
+    [realOnChange, min, max]
   );
 
   return (
@@ -48,6 +49,7 @@ const NumberInput: React.FC<Props> = props => {
         onChange={onChange}
         inputProps={{
           min,
+          max,
           step: 0.5
         }}
       />

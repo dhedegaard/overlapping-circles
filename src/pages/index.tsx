@@ -42,6 +42,8 @@ const Index: React.FC = () => {
     );
   }, [r1, r2, distance]);
 
+  const max = React.useMemo(() => Math.floor(Number.MAX_SAFE_INTEGER / 10), []);
+
   return (
     <Layout>
       <Typography gutterBottom variant="h3" align="center">
@@ -56,6 +58,7 @@ const Index: React.FC = () => {
               value={r1}
               onChange={setR1}
               min={0.5}
+              max={max}
             />
             <NumberInput
               id="r2"
@@ -63,6 +66,7 @@ const Index: React.FC = () => {
               value={r2}
               onChange={setR2}
               min={0.5}
+              max={max}
             />
             <NumberInput
               id="distance"
@@ -70,6 +74,7 @@ const Index: React.FC = () => {
               value={distance}
               onChange={setDistance}
               min={0}
+              max={max}
             />
           </CardContent>
           <Divider />
