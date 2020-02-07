@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/overlapping-circles`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
@@ -21,7 +20,7 @@ module.exports = {
       options: {
         name: `Overlapping Circles`,
         short_name: `Circles`,
-        start_url: `/overlapping-circles/`,
+        start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
