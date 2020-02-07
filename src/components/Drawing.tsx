@@ -1,6 +1,7 @@
 import React from "react";
 import { Layer, Stage } from "react-konva";
 import DrawingCircle from "./DrawingCircle";
+import { colors } from "@material-ui/core";
 
 const width = 600;
 const height = 300;
@@ -31,7 +32,7 @@ const Drawing: React.FC<Props> = props => {
           radius={props.r1 * scale}
           radiusLabel={props.r1.toLocaleString()}
           angle={60}
-          color="green"
+          color={colors.indigo[500]}
         />
         <DrawingCircle
           centerX={r2x}
@@ -39,7 +40,7 @@ const Drawing: React.FC<Props> = props => {
           radius={props.r2 * scale}
           radiusLabel={props.r2.toLocaleString()}
           angle={150}
-          color="green"
+          color={colors.teal[500]}
         />
       </Layer>
     </Stage>
