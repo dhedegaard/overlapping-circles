@@ -6,7 +6,8 @@ import {
   Card,
   Container,
   CardContent,
-  Divider
+  Divider,
+  colors
 } from "@material-ui/core";
 import Drawing from "../components/Drawing";
 import styled from "styled-components";
@@ -14,6 +15,10 @@ import OverlappingResult from "../components/OverlappingResult";
 
 const StyledContainer = styled(Container)`
   margin-bottom: 24px;
+`;
+
+const ColorizedTypography = styled(Typography)<{ overrideColor: string }>`
+  color: ${p => p.overrideColor};
 `;
 
 const max = Math.floor(Number.MAX_SAFE_INTEGER / 10);
@@ -54,7 +59,18 @@ const Index: React.FC = () => {
           <CardContent>
             <NumberInput
               id="r1"
-              label="Circle 1 radius (r1):"
+              label={
+                <>
+                  Circle 1 radius (
+                  <ColorizedTypography
+                    display="inline"
+                    overrideColor={colors.indigo[500]}
+                  >
+                    r1
+                  </ColorizedTypography>
+                  ):
+                </>
+              }
               value={r1}
               onChange={setR1}
               min={0.5}
@@ -62,7 +78,18 @@ const Index: React.FC = () => {
             />
             <NumberInput
               id="r2"
-              label="Circle 2 radius (r2):"
+              label={
+                <>
+                  Circle 2 radius (
+                  <ColorizedTypography
+                    display="inline"
+                    overrideColor={colors.teal[500]}
+                  >
+                    r2
+                  </ColorizedTypography>
+                  ):
+                </>
+              }
               value={r2}
               onChange={setR2}
               min={0.5}
@@ -70,7 +97,18 @@ const Index: React.FC = () => {
             />
             <NumberInput
               id="distance"
-              label="Distancen between the centers (d):"
+              label={
+                <>
+                  Distancen between the centers (
+                  <ColorizedTypography
+                    display="inline"
+                    overrideColor={colors.red[500]}
+                  >
+                    d
+                  </ColorizedTypography>
+                  ):
+                </>
+              }
               value={distance}
               onChange={setDistance}
               min={0}

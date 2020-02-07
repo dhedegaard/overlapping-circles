@@ -13,13 +13,13 @@ const Container = styled.div`
 
 const StyledFormLabel = styled(FormLabel)`
   text-align: right;
-  padding: 6px;
+  padding: 2px;
   padding-left: 0;
 `;
 
 type Props = {
   id: string;
-  label: string;
+  label: React.ReactNode;
   value: number;
   min: number;
   max: number;

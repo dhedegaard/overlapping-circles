@@ -8,7 +8,7 @@ const Container = styled.div`
   & > * {
     &:first-child {
       text-align: right;
-      padding-right: 8px;
+      padding-right: 2px;
     }
     flex-basis: 50%;
   }
