@@ -13,15 +13,10 @@ type Props = {
 
 const Drawing: React.FC<Props> = props => {
   const minWidth = props.r1 + props.distance + props.r2;
-  console.log("minWidth", minWidth);
   const minHeight = Math.max(props.r1 * 2, props.r2 * 2);
-  console.log("minHeight", minHeight);
   const scaleWidth = width / (minWidth * 1.2);
-  console.log("scaleWidth:", scaleWidth);
   const scaleHeight = height / (minHeight * 1.2);
-  console.log("scaleHeight:", scaleHeight);
   const scale = Math.min(scaleWidth, scaleHeight);
-  console.log("scale:", scale);
 
   const scaledDist = props.distance * scale;
   const r1x = width / 2 - scaledDist / 2;
