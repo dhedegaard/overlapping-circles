@@ -21,6 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install -g yarn
       - run: yarn
+      - run: yarn test
       - run: yarn build
       - run: echo "overlapping-circles.dhedegaard.dk" > ./public/CNAME
         env:
