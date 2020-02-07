@@ -36,6 +36,12 @@ const DrawingCircle: React.FC<Props> = props => {
         ]}
         stroke={props.color}
       />
+      <Circle
+        radius={2}
+        x={props.centerX}
+        y={props.centerY}
+        stroke={props.color}
+      />
       <Text
         align="center"
         x={labelX}

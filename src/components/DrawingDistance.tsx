@@ -12,8 +12,8 @@ type Props = {
 
 const DrawingDistance: React.FC<Props> = props => (
   <>
-    <Circle x={props.x1} y={props.y1} fill={props.color} radius={2} />
-    <Circle x={props.x2} y={props.y2} fill={props.color} radius={2} />
+    <Circle x={props.x1} y={props.y1} fill={props.color} radius={3} />
+    <Circle x={props.x2} y={props.y2} fill={props.color} radius={3} />
     <Line
       points={[props.x1, props.y1, props.x2, props.y2]}
       stroke={props.color}
