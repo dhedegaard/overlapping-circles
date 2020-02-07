@@ -30,7 +30,7 @@ const Drawing: React.FC<Props> = props => {
           centerX={r1x}
           centerY={height / 2}
           radius={props.r1 * scale}
-          radiusLabel={props.r1.toLocaleString()}
+          radiusLabel={`r1: ${props.r1.toLocaleString()}`}
           angle={60}
           color={colors.indigo[500]}
         />
@@ -38,7 +38,7 @@ const Drawing: React.FC<Props> = props => {
           centerX={r2x}
           centerY={height / 2}
           radius={props.r2 * scale}
-          radiusLabel={props.r2.toLocaleString()}
+          radiusLabel={`r2: ${props.r2.toLocaleString()}`}
           angle={150}
           color={colors.teal[500]}
         />
