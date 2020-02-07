@@ -15,6 +15,13 @@ const Layout: React.FC = props => (
     >
       <html lang="en" />
       <link rel="icon" type="image/png" href={favicon} />
+      <meta property="og:title" content="Overlapping Circles" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:url"
+        content="https://overlapping-circles.dhedegaard.dk/"
+      />
+      <meta property="og:image" content={favicon} />
     </Helmet>
     <Container fixed maxWidth="md">
       {props.children}
