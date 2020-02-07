@@ -29,15 +29,17 @@ const Drawing: React.FC<Props> = props => {
           centerX={r1x}
           centerY={height / 2}
           radius={props.r1 * scale}
+          radiusLabel={props.r1.toLocaleString()}
           angle={60}
-          stroke="green"
+          color="green"
         />
         <DrawingCircle
           centerX={r2x}
           centerY={height / 2}
           radius={props.r2 * scale}
+          radiusLabel={props.r2.toLocaleString()}
           angle={150}
-          stroke="green"
+          color="green"
         />
       </Layer>
     </Stage>

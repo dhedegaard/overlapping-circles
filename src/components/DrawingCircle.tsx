@@ -1,12 +1,13 @@
 import React from "react";
-import { Line, Circle } from "react-konva";
+import { Line, Circle, Text } from "react-konva";
 
 type Props = {
   centerX: number;
   centerY: number;
   radius: number;
   angle: number;
-  stroke: React.ComponentProps<typeof Circle>["stroke"];
+  radiusLabel: string;
+  color: React.ComponentProps<typeof Circle>["stroke"];
 };
 
 const DrawingCircle: React.FC<Props> = props => {
@@ -15,13 +16,16 @@ const DrawingCircle: React.FC<Props> = props => {
   const circumferencePointY =
     props.centerY + props.radius * Math.sin(props.angle);
 
+  const labelX = Math.floor((circumferencePointX + props.centerX) / 2);
+  const labelY = Math.floor((circumferencePointY + props.centerY) / 2);
+
   return (
     <>
       <Circle
         radius={props.radius}
         x={props.centerX}
         y={props.centerY}
-        stroke={props.stroke}
+        stroke={props.color}
       />
       <Line
         points={[
@@ -30,7 +34,14 @@ const DrawingCircle: React.FC<Props> = props => {
           circumferencePointX,
           circumferencePointY
         ]}
-        stroke={props.stroke}
+        stroke={props.color}
+      />
+      <Text
+        align="center"
+        x={labelX}
+        y={labelY + (props.radius > 180 ? -10 : 10)}
+        text={props.radiusLabel}
+        fill={props.color}
       />
     </>
   );
