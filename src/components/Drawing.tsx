@@ -3,8 +3,8 @@ import { Layer, Stage } from "react-konva";
 import DrawingCircle from "./DrawingCircle";
 import { colors } from "@material-ui/core";
 
-const width = 600;
-const height = 300;
+const width = 830;
+const height = 500;
 
 type Props = {
   r1: number;

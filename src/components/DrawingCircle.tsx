@@ -39,7 +39,7 @@ const DrawingCircle: React.FC<Props> = props => {
       <Text
         align="center"
         x={labelX}
-        y={labelY + (props.radius > 180 ? -10 : 10)}
+        y={labelY + 10}
         text={props.radiusLabel}
         fill={props.color}
         fontStyle="bold"
