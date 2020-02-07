@@ -2,6 +2,7 @@ import React from "react";
 import { Layer, Stage } from "react-konva";
 import DrawingCircle from "./DrawingCircle";
 import { colors } from "@material-ui/core";
+import DrawingDistance from "./DrawingDistance";
 
 const width = 830;
 const height = 500;
@@ -42,6 +43,15 @@ const Drawing: React.FC<Props> = props => {
           angle={150}
           color={colors.teal[500]}
         />
+        {scaledDist >= 1 && (
+          <DrawingDistance
+            x1={r1x}
+            y1={height / 2}
+            x2={r2x}
+            y2={height / 2}
+            color={colors.red[500]}
+          />
+        )}
       </Layer>
     </Stage>
   );
