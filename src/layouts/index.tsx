@@ -14,7 +14,7 @@ const Layout: React.FC = props => (
       ]}
     >
       <html lang="en" />
-      <link rel="icon" href={favicon} />
+      <link rel="icon" type="image/png" href={favicon} />
     </Helmet>
     <Container fixed maxWidth="md">
       {props.children}
