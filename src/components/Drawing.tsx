@@ -50,6 +50,7 @@ const Drawing: React.FC<Props> = props => {
             x2={r2x}
             y2={height / 2}
             color={colors.red[500]}
+            label={`d: ${props.distance.toLocaleString()}`}
           />
         )}
       </Layer>

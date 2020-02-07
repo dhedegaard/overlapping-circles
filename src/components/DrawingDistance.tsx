@@ -1,5 +1,5 @@
 import React from "react";
-import { Line, Circle } from "react-konva";
+import { Line, Circle, Text } from "react-konva";
 
 type Props = {
   x1: number;
@@ -7,6 +7,7 @@ type Props = {
   x2: number;
   y2: number;
   color: string;
+  label: string;
 };
 
 const DrawingDistance: React.FC<Props> = props => (
@@ -16,6 +17,14 @@ const DrawingDistance: React.FC<Props> = props => (
     <Line
       points={[props.x1, props.y1, props.x2, props.y2]}
       stroke={props.color}
+    />
+    <Text
+      align="center"
+      x={Math.floor((props.x1 + props.x2) / 2)}
+      y={Math.floor((props.y1 + props.y2) / 2) + 10}
+      text={props.label}
+      fill={props.color}
+      fontStyle="bold"
     />
   </>
 );
