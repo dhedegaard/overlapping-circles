@@ -16,6 +16,8 @@ const StyledContainer = styled(Container)`
   margin-bottom: 24px;
 `;
 
+const max = Math.floor(Number.MAX_SAFE_INTEGER / 10);
+
 const Index: React.FC = () => {
   const [r1, setR1] = React.useState(1);
   const [r2, setR2] = React.useState(2);
@@ -41,8 +43,6 @@ const Index: React.FC = () => {
       y * (x + Math.sqrt(z + b - a))
     );
   }, [r1, r2, distance]);
-
-  const max = React.useMemo(() => Math.floor(Number.MAX_SAFE_INTEGER / 10), []);
 
   return (
     <Layout>
