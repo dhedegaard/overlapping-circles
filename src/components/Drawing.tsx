@@ -3,9 +3,14 @@ import { Layer, Stage } from "react-konva";
 import DrawingCircle from "./DrawingCircle";
 import { colors } from "@material-ui/core";
 import DrawingDistance from "./DrawingDistance";
+import styled from "styled-components";
 
 const width = 830;
 const height = 500;
+
+const Container = styled.div`
+  overflow-x: scroll;
+`;
 
 type Props = {
   r1: number;
@@ -25,36 +30,38 @@ const Drawing: React.FC<Props> = props => {
   const r2x = width / 2 + scaledDist / 2;
 
   return (
-    <Stage width={width} height={height}>
-      <Layer>
-        <DrawingCircle
-          centerX={r1x}
-          centerY={height / 2}
-          radius={props.r1 * scale}
-          radiusLabel={`r1: ${props.r1.toLocaleString()}`}
-          angle={60}
-          color={colors.indigo[500]}
-        />
-        <DrawingCircle
-          centerX={r2x}
-          centerY={height / 2}
-          radius={props.r2 * scale}
-          radiusLabel={`r2: ${props.r2.toLocaleString()}`}
-          angle={150}
-          color={colors.teal[500]}
-        />
-        {scaledDist >= 1 && (
-          <DrawingDistance
-            x1={r1x}
-            y1={height / 2}
-            x2={r2x}
-            y2={height / 2}
-            color={colors.red[500]}
-            label={`d: ${props.distance.toLocaleString()}`}
+    <Container>
+      <Stage width={width} height={height}>
+        <Layer>
+          <DrawingCircle
+            centerX={r1x}
+            centerY={height / 2}
+            radius={props.r1 * scale}
+            radiusLabel={`r1: ${props.r1.toLocaleString()}`}
+            angle={60}
+            color={colors.indigo[500]}
           />
-        )}
-      </Layer>
-    </Stage>
+          <DrawingCircle
+            centerX={r2x}
+            centerY={height / 2}
+            radius={props.r2 * scale}
+            radiusLabel={`r2: ${props.r2.toLocaleString()}`}
+            angle={150}
+            color={colors.teal[500]}
+          />
+          {scaledDist >= 1 && (
+            <DrawingDistance
+              x1={r1x}
+              y1={height / 2}
+              x2={r2x}
+              y2={height / 2}
+              color={colors.red[500]}
+              label={`d: ${props.distance.toLocaleString()}`}
+            />
+          )}
+        </Layer>
+      </Stage>
+    </Container>
   );
 };
 
