@@ -17,8 +17,8 @@ const Container = styled.div`
 
 const ScaleDisplay = styled(Typography)`
   position: absolute;
-  top: 0;
-  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 10px;
   color: ${colors.grey[500]};
   font-size: 0.8em;
@@ -48,7 +48,7 @@ const Drawing: React.FC<Props> = props => {
 
   return (
     <Container>
-      <ScaleDisplay>
+      <ScaleDisplay display="inline">
         Scale: 1:{(Math.round(scale * 1000) / 1000).toLocaleString()}
       </ScaleDisplay>
       <Stage width={width} height={height}>
