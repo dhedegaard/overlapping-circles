@@ -16,6 +16,10 @@ const Layout: React.FC = props => (
       <html lang="en" />
       <link rel="icon" type="image/png" href={favicon} />
       <meta property="og:title" content="Overlapping Circles" />
+      <meta
+        property="og:description"
+        content="A calculation of circle-circle intersection area."
+      />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
