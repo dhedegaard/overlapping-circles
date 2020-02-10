@@ -5,6 +5,7 @@ describe("calc-intersection-area", () => {
     expect(calcIntersectionArea(5, 5, 10)).toBe(0);
     expect(calcIntersectionArea(5, 5, 20)).toBe(0);
   });
+
   it("should return PI, if one circle is within the other, and the small circle has a radius of 1", () => {
     expect(calcIntersectionArea(1, 10, 2)).toBeCloseTo(Math.PI);
   });
