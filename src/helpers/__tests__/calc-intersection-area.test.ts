@@ -1,4 +1,3 @@
-import "../calc-intersection-area";
 import calcIntersectionArea from "../calc-intersection-area";
 
 describe("calc-intersection-area", () => {
