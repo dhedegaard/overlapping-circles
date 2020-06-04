@@ -39,11 +39,13 @@
     "deploy": "yarn build && gh-pages -d public"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.2.0",
     "@types/jest": "^25.1.2",
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^4.4.2",
     "babel-jest": "^25.1.0",
     "babel-preset-gatsby": "^0.2.28",
+    "canvas": "^2.6.1",
     "gatsby-cli": "^2.8.29",
     "gh-pages": "^2.2.0",
     "identity-obj-proxy": "^3.0.0",
