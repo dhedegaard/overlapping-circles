@@ -7,7 +7,7 @@ import {
   Container,
   CardContent,
   Divider,
-  colors
+  colors,
 } from "@material-ui/core";
 import Drawing from "../components/Drawing";
 import styled from "styled-components";
@@ -18,8 +18,10 @@ const StyledContainer = styled(Container)`
   margin-bottom: 24px;
 `;
 
-const ColorizedTypography = styled(Typography)<{ overrideColor: string }>`
-  color: ${p => p.overrideColor};
+const ColorizedTypography = styled(({ overrideColor, ...rest }) => (
+  <Typography {...rest} />
+))<{ overrideColor: string }>`
+  color: ${(p) => p.overrideColor};
 `;
 
 const max = Math.floor(Number.MAX_SAFE_INTEGER / 10);
