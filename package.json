@@ -10,7 +10,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "16.9.5",
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.19.12",
+    "gatsby": "^4.25.7",
     "gatsby-link": "^2.2.29",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-material-ui": "^2.1.6",
